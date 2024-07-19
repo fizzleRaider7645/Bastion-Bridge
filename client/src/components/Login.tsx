@@ -1,10 +1,9 @@
-const Login = () => {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+import GithubLoginButton from "../atoms/button/GitHubLogin";
 
+const Login = () => {
   return (
     <div>
-      <h1>Login</h1>
-      <a href={`${backendUrl}/auth/github`}>Login with GitHub</a>
+      <GithubLoginButton />
     </div>
   );
 };
