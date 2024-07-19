@@ -4,10 +4,6 @@ dotenv.config();
 import passport from "passport";
 import { Strategy as GitHubStrategy } from "passport-github2";
 
-// Log environment variables for debugging
-console.log(`GITHUB_CLIENT_ID: ${process.env.GITHUB_CLIENT_ID}`);
-console.log(`GITHUB_CLIENT_SECRET: ${process.env.GITHUB_CLIENT_SECRET}`);
-
 passport.use(
   new GitHubStrategy(
     {
