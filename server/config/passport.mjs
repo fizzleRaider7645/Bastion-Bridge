@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: `${process.env.BASE_CALLBACK_URL}/callback`,
+      callbackURL: process.env.BASE_CALLBACK_URL,
     },
     function (accessToken, refreshToken, profile, done) {
       // Here, you would find or create a user in your database
