@@ -1,6 +1,3 @@
-// import dotenv from "dotenv";
-// dotenv.config(); // Load environment variables
-
 import express from "express";
 import session from "express-session";
 import passport from "passport";

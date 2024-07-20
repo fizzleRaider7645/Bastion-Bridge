@@ -1,11 +1,13 @@
 import { styled } from "@stitches/react";
 import { Primitive } from "@radix-ui/react-primitive";
+import { Avatar, Text } from "@radix-ui/themes";
 
 // Define a styled button using Radix
 const GitHubButton = styled(Primitive.button, {
   backgroundColor: "#333",
   color: "#fff",
   padding: "10px 20px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   border: "none",
   borderRadius: "5px",
   cursor: "pointer",
@@ -28,13 +30,15 @@ const GitHubLogin = () => {
 
   return (
     <GitHubButton onClick={handleLogin}>
-      <img
+      <Avatar
+        size='3'
         src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-        alt='GitHub Logo'
-        width='24'
-        height='24'
+        radius='full'
+        fallback='T'
       />
-      Login with GitHub
+      <Text as='div' size='4' color='yellow' weight='bold'>
+        Login with GitHub
+      </Text>
     </GitHubButton>
   );
 };
