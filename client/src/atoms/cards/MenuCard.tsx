@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Box, Card, Flex } from "@radix-ui/themes";
 import { styled } from "@stitches/react";
 

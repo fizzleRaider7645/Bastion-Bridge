@@ -14,7 +14,7 @@ const CenteredContainer = styled("div", {
   gap: "150px", // Optional: Add some space between the heading and the card
 });
 
-const Login = () => {
+const Login: React.FC = () => {
   return (
     <CenteredContainer>
       <Heading color='yellow' as='h1'>
