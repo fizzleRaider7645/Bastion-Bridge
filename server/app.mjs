@@ -12,6 +12,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
+    cookie: {
+      secure: process.env.NODE_ENV === "production",
+      httpOnly: true, // Helps to prevent cross-site scripting (XSS) attacks
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
   })
 );
 
@@ -21,11 +26,6 @@ app.use(passport.session());
 
 // Routes
 app.use("/auth", authRoutes);
-
-// Home route
-app.get("/", (req, res) => {
-  res.send('<h1>Home</h1><a href="/auth/github">Login with GitHub</a>');
-});
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {

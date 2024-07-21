@@ -12,7 +12,6 @@ passport.use(
       callbackURL: process.env.BASE_CALLBACK_URL,
     },
     function (accessToken, refreshToken, profile, done) {
-      // Here, you would find or create a user in your database
       return done(null, profile);
     }
   )
