@@ -4,7 +4,7 @@ import passport from "passport";
 const router = Router();
 
 router.get("/github", (req, res, next) => {
-  const clientDomain = req.headers.host;
+  const clientDomain = req.headers.host; // this is not a good idea
   const state = "hi";
   req.session.state = state;
   console.log("clientDomain: ", clientDomain);
